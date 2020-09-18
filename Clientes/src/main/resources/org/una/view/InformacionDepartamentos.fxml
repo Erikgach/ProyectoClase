@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="acp_infodepartamentos" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #017373;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.controllers.InformacionDepartamentosController">
+   <children>
+      <TableView fx:id="tbl_infodepartamentos" layoutX="22.0" layoutY="242.0" prefHeight="320.0" prefWidth="943.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="col_nombre" prefWidth="225.0" text="Nombre" />
+            <TableColumn fx:id="col_estado" prefWidth="208.0" text="Estado" />
+            <TableColumn fx:id="col_operaciones" prefWidth="360.0" text="Operaciones" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_cerrar" layoutX="33.0" layoutY="605.0" mnemonicParsing="false" onAction="#btn_cerrarAction" prefHeight="59.0" prefWidth="158.0" style="-fx-background-color: #fofofo;" text="Cerrar" textFill="#1e1818">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_agregar" layoutX="787.0" layoutY="605.0" mnemonicParsing="false" onAction="#btn_agregarAction" prefHeight="59.0" prefWidth="164.0" style="-fx-background-color: #fofofo;" text="Agregar" textFill="#221e1e">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="25.0" layoutY="14.0" prefHeight="228.0" prefWidth="943.0" style="-fx-background-color: #b3b2ad;">
+         <children>
+            <Label fx:id="lbl_titulo1" layoutX="14.0" layoutY="38.0" prefHeight="70.0" prefWidth="732.0" text="Información de Departamentos">
+               <font>
+                  <Font name="System Bold Italic" size="48.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_buscar" layoutX="731.0" layoutY="139.0" mnemonicParsing="false" onAction="#btn_buscarAction" prefHeight="41.0" prefWidth="94.0" style="-fx-background-color: #fofofo;" text="Buscar" textFill="#222121">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txt_consultar" layoutX="116.0" layoutY="139.0" prefHeight="41.0" prefWidth="423.0" text="Consultar por id, nombre y estado" />
+            <Button fx:id="btn_borrar" layoutX="835.0" layoutY="139.0" mnemonicParsing="false" onAction="#btn_borrarAction" prefHeight="41.0" prefWidth="94.0" style="-fx-background-color: #fofofo;" text="Borrar" textFill="#222121">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="combo_categorias" layoutX="552.0" layoutY="139.0" prefHeight="41.0" prefWidth="171.0" promptText="Categorias" />
+            <Button fx:id="atrasbutton" layoutX="835.0" layoutY="6.0" mnemonicParsing="false" onAction="#retroceder" prefHeight="51.0" prefWidth="108.0" text="ATRAS">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

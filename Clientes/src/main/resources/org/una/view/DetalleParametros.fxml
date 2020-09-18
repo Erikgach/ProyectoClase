@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="bdp_detparametros" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="747.0" prefWidth="1073.0" style="-fx-background-color: #017373;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.controllers.DetalleParametrosController">
+   <bottom>
+      <AnchorPane fx:id="acp_detparametros" prefHeight="590.0" prefWidth="950.0" style="-fx-background-color: #B2B3AD;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lbl_fecmodificacion" layoutX="65.0" layoutY="496.0" text="Fecha Modificación">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_id" layoutX="219.0" layoutY="149.0" prefHeight="40.0" prefWidth="40.0" text="Id">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_descripcion" layoutX="129.0" layoutY="357.0" text="Descripción">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_id" layoutX="330.0" layoutY="147.0" prefHeight="43.0" prefWidth="330.0" />
+            <TextField fx:id="txt_nombre" layoutX="330.0" layoutY="202.0" prefHeight="46.0" prefWidth="335.0" />
+            <Label fx:id="txt_fecregistro" layoutX="353.0" layoutY="418.0" prefHeight="41.0" prefWidth="343.0" text="Label" />
+            <Button fx:id="btn_cancelar" layoutX="41.0" layoutY="590.0" mnemonicParsing="false" onAction="#btn_cancelarAction" prefHeight="63.0" prefWidth="203.0" style="-fx-background-color: #990000;" text="Cancelar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_guardar" layoutX="840.0" layoutY="591.0" mnemonicParsing="false" onAction="#btn_guardarAction" prefHeight="62.0" prefWidth="191.0" style="-fx-background-color: #FOFOFO;" text="Guardar">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Button>
+            <Label fx:id="lbl_titulo" layoutX="248.0" layoutY="54.0" prefHeight="53.0" prefWidth="625.0" text="Información de Párametros">
+               <font>
+                  <Font name="System Bold Italic" size="48.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_nombre" layoutX="202.0" layoutY="208.0" text="Nombre">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_valor" layoutX="194.0" layoutY="279.0" prefHeight="35.0" prefWidth="76.0" text="Valor">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_fecregistro" layoutX="141.0" layoutY="429.0" text="Creado el">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_valor" layoutX="329.0" layoutY="268.0" prefHeight="47.0" prefWidth="337.0" />
+            <TextField fx:id="txt_descripcion" layoutX="334.0" layoutY="344.0" prefHeight="48.0" prefWidth="333.0" />
+            <Label fx:id="txt_fecmodificacion" layoutX="353.0" layoutY="464.0" prefHeight="46.0" prefWidth="311.0" text="Label" />
+         </children>
+      </AnchorPane>
+   </bottom>
+   <top>
+      <AnchorPane prefHeight="94.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btn_agregar" layoutX="391.0" layoutY="18.0" mnemonicParsing="false" onAction="#btn_agregarAction" prefHeight="70.0" prefWidth="192.0" style="-fx-background-color: #FOFO;" text="Agregar Párametro" textFill="#171717">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_modificar" layoutX="225.0" layoutY="19.0" mnemonicParsing="false" onAction="#btn_modificarAction" prefHeight="68.0" prefWidth="123.0" style="-fx-background-color: #FOFO;" text="Modificar" textFill="#030303">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_ver" layoutX="89.0" layoutY="18.0" mnemonicParsing="false" onAction="#btn_verAction" prefHeight="70.0" prefWidth="92.0" style="-fx-background-color: #FOFOFO;" text="Ver" textFill="#2f2828">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="atrasbutton" layoutX="965.0" mnemonicParsing="false" onAction="#retroceder" prefHeight="51.0" prefWidth="108.0" text="ATRAS">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

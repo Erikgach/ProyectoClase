@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="acp_cambiocontraseña" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #017373;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.controllers.CambiarContraseñaController">
+   <children>
+      <AnchorPane layoutX="168.0" layoutY="22.0" prefHeight="657.0" prefWidth="621.0" style="-fx-background-color: #b3b2ad;">
+         <children>
+            <Label fx:id="lbl_titulo" layoutX="13.0" layoutY="31.0" prefHeight="70.0" prefWidth="597.0" text="Se ha solicitado el cambio de contraseña">
+               <font>
+                  <Font name="System Bold Italic" size="31.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_abrir" layoutX="228.0" layoutY="108.0" mnemonicParsing="false" onAction="#btn_abrirAction" prefHeight="44.0" prefWidth="165.0" style="-fx-background-color: #fofofo;" text="Abrir" textFill="#0a0909">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Button>
+            <Label layoutX="239.0" layoutY="167.0" prefHeight="35.0" prefWidth="151.0" text="Condiciones:">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="116.0" layoutY="214.0" prefHeight="27.0" prefWidth="376.0" text="1-Se requiere un minimo de x caracteres">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="241.0" prefHeight="42.0" prefWidth="617.0" text="2-La bueva contraseña debe incluir algunos de los siguiemtes simbolos">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="283.0" prefHeight="27.0" prefWidth="597.0" text="3-No contiene cadenas de al menos 4 letras de su nombre o apellidos">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_contrasenaactual" layoutX="186.0" layoutY="329.0" prefHeight="21.0" prefWidth="179.0" text=" Contraseña Actual">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_contrasenaactual" layoutX="168.0" layoutY="370.0" prefHeight="25.0" prefWidth="230.0" />
+            <Label fx:id="lbl_nuevacontraseña" layoutX="193.0" layoutY="414.0" prefHeight="31.0" prefWidth="179.0" text="Nueva  Contraseña ">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_nuevacontraseña" layoutX="160.0" layoutY="455.0" prefHeight="25.0" prefWidth="230.0" />
+            <Label fx:id="lbl_confirmarcontraseña" layoutX="174.0" layoutY="499.0" prefHeight="31.0" prefWidth="260.0" text="Confirmar Contraseña">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_confirmarContraseña" layoutX="160.0" layoutY="546.0" prefHeight="25.0" prefWidth="230.0" />
+            <Button fx:id="btn_cambiarcontraseña" layoutX="399.0" layoutY="587.0" mnemonicParsing="false" onAction="#btn_cambiarcontraseñaAction" prefHeight="56.0" prefWidth="260.0" style="-fx-background-color: #fofofo;" text="Cambiar Contraseña" textFill="#171616">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button fx:id="atrasbutton" layoutX="892.0" layoutY="1.0" mnemonicParsing="false" onAction="#retroceder" prefHeight="56.0" prefWidth="108.0" text="Atras">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

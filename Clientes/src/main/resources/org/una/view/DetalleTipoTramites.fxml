@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root fx:id="bdp_dettipotramites" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #017373;" type="BorderPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.controllers.DetalleTipoTramitesController">
+   <left>
+      <AnchorPane fx:id="acp_dettipotramites" prefHeight="650.0" prefWidth="998.0" style="-fx-background-color: #b3b3ad;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btn_guardar" layoutX="781.0" layoutY="553.0" mnemonicParsing="false" onAction="#btn_guardarAction" prefHeight="58.0" prefWidth="160.0" style="-fx-background-color: #fofofo;" text="Guardar">
+               <font>
+                  <Font name="System Bold Italic" size="28.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_cancelar" layoutX="40.0" layoutY="549.0" mnemonicParsing="false" onAction="#btn_cancelarAction" prefHeight="66.0" prefWidth="169.0" style="-fx-background-color: #990000;" text="Cancelar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Button>
+            <Label fx:id="txt_fecmofificacion" layoutX="454.0" layoutY="435.0" prefHeight="43.0" prefWidth="316.0" text="Label" />
+            <Label fx:id="txt_fecregistro" layoutX="450.0" layoutY="374.0" prefHeight="35.0" prefWidth="325.0" text="Label" />
+            <ComboBox fx:id="cbx_estado" layoutX="432.0" layoutY="281.0" prefHeight="25.0" prefWidth="306.0" />
+            <TextField fx:id="txt_descrpcion" layoutX="432.0" layoutY="154.0" prefHeight="25.0" prefWidth="306.0" />
+            <TextField fx:id="txt_id" layoutX="432.0" layoutY="209.0" prefHeight="25.0" prefWidth="306.0" />
+            <Label fx:id="lbl_fecmodificacion" layoutX="136.0" layoutY="443.0" text="Última Modificación">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_fecregistro" layoutX="144.0" layoutY="374.0" text="Creado el">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_estado" layoutX="160.0" layoutY="276.0" text="Estado">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_descripcion" layoutX="156.0" layoutY="207.0" text="Descripción">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_id" layoutX="198.0" layoutY="167.0" text="Id">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_titulo" layoutX="136.0" layoutY="61.0" text="Información de Tipos de Trámites">
+               <font>
+                  <Font name="System Bold Italic" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <top>
+      <AnchorPane prefHeight="47.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btn_agregar" layoutX="329.0" layoutY="9.0" mnemonicParsing="false" onAction="#btn_agregarAction" style="-fx-background-color: #fofofo;" text="Agregar Tipo de Trámite">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_modificar" layoutX="194.0" layoutY="9.0" mnemonicParsing="false" onAction="#btn_modificarAction" style="-fx-background-color: #fofofo;" text="Modificar" textFill="#141212">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_ver" layoutX="87.0" layoutY="9.0" mnemonicParsing="false" onAction="#btn_verAction" style="-fx-background-color: #fofofo;" text="Ver">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="atrasbutton" layoutX="882.0" layoutY="5.0" mnemonicParsing="false" onAction="#retroceder" prefHeight="51.0" prefWidth="118.0" text="ATRAS">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+</fx:root>

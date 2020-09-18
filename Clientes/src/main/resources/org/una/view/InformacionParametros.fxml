@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="acp_parametros" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #017373;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.controllers.InformacionParametrosController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="1000.0" style="-fx-background-color: #b3b2ad;">
+         <children>
+            <TextField fx:id="txt_consultar" layoutX="71.0" layoutY="125.0" prefHeight="50.0" prefWidth="501.0" text="Consultar por id, nombre, valor y descripcion" />
+            <Button fx:id="btn_borrar" layoutX="853.0" layoutY="130.0" mnemonicParsing="false" onAction="#btn_borrarAction" style="-fx-background-color: #fofofo;" text="Borrar" textFill="#403f3f">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_buscar" layoutX="766.0" layoutY="130.0" mnemonicParsing="false" onAction="#btn_buscarAction" style="-fx-background-color: #fofofo;" text="Buscar">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="lbl_titulo1" layoutX="63.0" layoutY="30.0" prefHeight="70.0" prefWidth="732.0" text="Información de Párametros">
+               <font>
+                  <Font name="System Bold Italic" size="48.0" />
+               </font>
+            </Label>
+            <Button fx:id="atrasbutton" layoutX="878.0" layoutY="5.0" mnemonicParsing="false" onAction="#retroceder" prefHeight="51.0" prefWidth="108.0" text="ATRAS">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="comboBox" layoutX="595.0" layoutY="130.0" prefHeight="39.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txt_fecmodificacion" layoutX="802.0" layoutY="544.0" prefHeight="25.0" prefWidth="158.0" />
+      <TextField fx:id="txt_fecregistro" layoutX="802.0" layoutY="498.0" prefHeight="25.0" prefWidth="158.0" />
+      <TextField fx:id="txt_descripcion" layoutX="354.0" layoutY="499.0" prefHeight="60.0" prefWidth="220.0" />
+      <Label fx:id="lbl_fecmodificacion" layoutX="629.0" layoutY="549.0" style="-fx-background-color: #fofofo;" text="Fecha Modificación" textFill="#fffafa">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="lbl_fecregistro" layoutX="629.0" layoutY="501.0" prefHeight="27.0" prefWidth="148.0" text="Fecha Registro" textFill="#fffbfb">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="lbl_descripcion" layoutX="232.0" layoutY="515.0" prefHeight="27.0" prefWidth="103.0" text="Descripción" textFill="#f5f2f2">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Button fx:id="btn_eliminar" layoutX="297.0" layoutY="595.0" mnemonicParsing="false" onAction="#btn_eliminarAction" style="-fx-background-color: #fofofo;" text="Eliminar" textFill="#171616">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_modificar" layoutX="464.0" layoutY="595.0" mnemonicParsing="false" onAction="#btn_modificarAction" style="-fx-background-color: #fofofo;" text="Modificar" textFill="#2c2727">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tbl_infoparametros" layoutX="20.0" layoutY="209.0" prefHeight="282.0" prefWidth="964.0">
+         <columns>
+            <TableColumn fx:id="col_id" prefWidth="103.0" text="Id" />
+            <TableColumn fx:id="col_nombre" prefWidth="108.0" text="Nombre" />
+            <TableColumn fx:id="col_valor" prefWidth="93.0" text="Valor" />
+            <TableColumn fx:id="col_descripcion" prefWidth="158.0" text="Descripcion" />
+            <TableColumn fx:id="col_fecregistro" prefWidth="132.0" text="Fecha Registro" />
+            <TableColumn fx:id="col_fecmodificacion" prefWidth="135.0" text="Fecha Modificación" />
+         </columns>
+      </TableView>
+      <Button fx:id="btn_cerrar" layoutX="29.0" layoutY="641.0" mnemonicParsing="false" onAction="#btn_cerrarAction" style="-fx-background-color: #990000;" text="Cerrar" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_agregar" layoutX="842.0" layoutY="634.0" mnemonicParsing="false" onAction="#btn_agregarAction" prefHeight="39.0" prefWidth="118.0" style="-fx-background-color: #fofofo;" text="Agregar">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="lbl_nombre" layoutX="19.0" layoutY="503.0" text="Nombre" textFill="#fff6f6">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="lbl_valor" layoutX="29.0" layoutY="560.0" text="Valor" textFill="#fffafa">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField fx:id="txt_valor" layoutX="100.0" layoutY="555.0" prefHeight="25.0" prefWidth="103.0" />
+      <TextField fx:id="txt_nombre" layoutX="100.0" layoutY="498.0" prefHeight="25.0" prefWidth="103.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="acp_variaciones" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #017373;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.controllers.InformacionVariacionesController">
+   <children>
+      <TextField fx:id="txt_grupo" layoutX="386.0" layoutY="541.0" prefHeight="25.0" prefWidth="89.0" />
+      <TextField fx:id="txt_fecregistro" layoutX="833.0" layoutY="541.0" prefHeight="25.0" prefWidth="119.0" />
+      <TextField fx:id="txt_estado" layoutX="575.0" layoutY="541.0" prefHeight="25.0" prefWidth="98.0" />
+      <TextField fx:id="txt_descripcion" layoutX="140.0" layoutY="541.0" prefHeight="25.0" prefWidth="140.0" />
+      <Label fx:id="lbl_grupo" layoutX="301.0" layoutY="546.0" prefHeight="21.0" prefWidth="58.0" text="Grupo" textFill="#d0c9c9">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="lbl_fecregistro" layoutX="697.0" layoutY="546.0" prefHeight="21.0" prefWidth="119.0" text="Fecha Registro" textFill="#ebe4e4">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="lbl_estado" layoutX="496.0" layoutY="544.0" prefHeight="25.0" prefWidth="59.0" text="Estado" textFill="#f8f6f6">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="lbl_descripcion" layoutX="14.0" layoutY="543.0" prefHeight="27.0" prefWidth="127.0" text="Descripción" textFill="#e4e3e3">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Button fx:id="btn_eliminar" layoutX="271.0" layoutY="624.0" mnemonicParsing="false" onAction="#btn_eliminarAction" prefHeight="40.0" prefWidth="134.0" style="-fx-background-color: #fofofo;" text="Eliminar" textFill="#2c2a2a">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_modificar" layoutX="548.0" layoutY="621.0" mnemonicParsing="false" onAction="#btn_modificarAction" prefHeight="40.0" prefWidth="127.0" style="-fx-background-color: #fofofo;" text="Modificar" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tbl_infovariaciones" layoutX="35.0" layoutY="169.0" prefHeight="362.0" prefWidth="949.0">
+         <columns>
+            <TableColumn fx:id="col_id" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="col_descripcion" prefWidth="195.0" text="Descripción" />
+            <TableColumn fx:id="col_grupo" prefWidth="116.0" text="Grupo" />
+            <TableColumn fx:id="col_estado" prefWidth="148.0" text="Estado" />
+            <TableColumn fx:id="col_fecregistro" prefWidth="186.0" text="Fecha Registro" />
+         </columns>
+      </TableView>
+      <Button fx:id="btn_cerrar" layoutX="50.0" layoutY="624.0" mnemonicParsing="false" onAction="#btn_cerrarAction" prefHeight="48.0" prefWidth="119.0" style="-fx-background-color: #990000;" text="Cerrar" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_agregar" layoutX="807.0" layoutY="621.0" mnemonicParsing="false" onAction="#btn_agregarAction" prefHeight="40.0" prefWidth="119.0" style="-fx-background-color: #fofofo;" text="Agregar" textFill="#1e1c1c">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="21.0" layoutY="14.0" prefHeight="157.0" prefWidth="959.0" style="-fx-background-color: #b3b2ad;">
+         <children>
+            <Label fx:id="lbl_titulo1" layoutX="30.0" layoutY="14.0" prefHeight="70.0" prefWidth="626.0" text="Información de Variaciones">
+               <font>
+                  <Font name="System Bold Italic" size="48.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_consultar" layoutX="62.0" layoutY="98.0" prefHeight="48.0" prefWidth="485.0" text="Consultar por id, descripcion, grupo y estado" />
+            <Button fx:id="btn_borrar" layoutX="731.0" layoutY="102.0" mnemonicParsing="false" onAction="#btn_borrarAction" prefHeight="40.0" prefWidth="89.0" style="-fx-background-color: #fofofo;" text="Borrar" textFill="#393434">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_buscar" layoutX="592.0" layoutY="102.0" mnemonicParsing="false" onAction="#btn_buscarAction" prefHeight="40.0" prefWidth="89.0" style="-fx-background-color: #fofofo;" text="Buscar" textFill="#252121">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="atrasbutton" layoutX="843.0" layoutY="6.0" mnemonicParsing="false" onAction="#retroceder" prefHeight="51.0" prefWidth="108.0" text="ATRAS">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

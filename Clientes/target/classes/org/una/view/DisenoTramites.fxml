@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root fx:id="bdp_disenotramites" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #017373;" type="BorderPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.controllers.DisenoTramitesController">
+   <center>
+      <TabPane fx:id="tabp_disenotramites" prefHeight="554.0" prefWidth="1000.0" style="-fx-background-color: #017373;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="ven_variaciones" onSelectionChanged="#ven_variacionesAction" text="Variaciones">
+            <content>
+              <AnchorPane fx:id="acp_variaciones" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btn_agregarV" layoutX="861.0" layoutY="4.0" mnemonicParsing="false" onAction="#btn_agregarVAction" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #fofofo;" text="Agregar" textFill="#1e1b1b">
+                           <font>
+                              <Font name="System Bold Italic" size="21.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="tabl_variaciones" layoutX="5.0" layoutY="56.0" prefHeight="362.0" prefWidth="990.0">
+                          <columns>
+                            <TableColumn fx:id="col_idV" prefWidth="81.0" text="Id" />
+                            <TableColumn fx:id="col_variacionV" prefWidth="229.0" text="Variación" />
+                              <TableColumn fx:id="col_estadoV" prefWidth="209.0" text="Estado" />
+                              <TableColumn fx:id="col_grupoV" prefWidth="101.0" text="Grupo" />
+                              <TableColumn fx:id="col_accionesV" prefWidth="101.0" text="Acciones" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btn_cancelarV" layoutX="29.0" layoutY="436.0" mnemonicParsing="false" onAction="#btn_cancelarVAction" prefHeight="54.0" prefWidth="119.0" style="-fx-background-color: #990000;" text="Cancelar" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="21.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_guardarV" layoutX="840.0" layoutY="436.0" mnemonicParsing="false" onAction="#btn_guardarVAction" prefHeight="48.0" prefWidth="127.0" style="-fx-background-color: #fofofo;" text="Guardar">
+                           <font>
+                              <Font name="System Bold Italic" size="22.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="ven_requisitos" onSelectionChanged="#vent_requisitosAction" text="Requisitos">
+            <content>
+              <AnchorPane fx:id="acp_requisitos" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tabl_requisitos" layoutX="14.0" layoutY="56.0" prefHeight="304.0" prefWidth="981.0">
+                           <columns>
+                              <TableColumn fx:id="col_idR" prefWidth="104.0" text="Id" />
+                              <TableColumn fx:id="col_requisitoR" prefWidth="291.0" text="Requisito" />
+                              <TableColumn fx:id="col_estadoR" prefWidth="185.0" text="Estado" />
+                              <TableColumn fx:id="col_accionesR" prefWidth="140.0" text="Acciones" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btn_agregarR" layoutX="881.0" layoutY="7.0" mnemonicParsing="false" onAction="#btn_agregarRAction" prefHeight="31.0" prefWidth="106.0" style="-fx-background-color: #fofofo;" text="Agregar" textFill="#221d1d">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_cancelarR" layoutX="14.0" layoutY="403.0" mnemonicParsing="false" onAction="#btn_cancelarRAction" prefHeight="43.0" prefWidth="143.0" style="-fx-background-color: #990000;" text="Cancelar" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="21.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_guardarR" layoutX="837.0" layoutY="392.0" mnemonicParsing="false" onAction="#btn_guardarRAction" prefHeight="56.0" prefWidth="150.0" style="-fx-background-color: #fofofo;" text="Guardar" textFill="#070606">
+                           <font>
+                              <Font name="System Bold Italic" size="26.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="144.0" prefWidth="1000.0" style="-fx-background-color: #b3b2ad;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lbl_titulo" layoutX="265.0" layoutY="5.0" prefHeight="70.0" prefWidth="594.0" text="Diseño de Trámites">
+               <font>
+                  <Font name="System Bold Italic" size="48.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_consulta" layoutX="99.0" layoutY="92.0" prefHeight="31.0" prefWidth="538.0" />
+            <Button fx:id="btn_buscar" layoutX="663.0" layoutY="86.0" mnemonicParsing="false" onAction="#btn_buscarAction" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #fofofo;" text="Buscar" textFill="#141212">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_borrar" layoutX="819.0" layoutY="85.0" mnemonicParsing="false" onAction="#btn_borrarAction" prefHeight="23.0" prefWidth="109.0" style="-fx-background-color: #fofofo;" text="Borrar" textFill="#141313">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="atrasbutton" layoutX="892.0" mnemonicParsing="false" onAction="#retroceder" prefHeight="51.0" prefWidth="108.0" text="ATRAS">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+</fx:root>

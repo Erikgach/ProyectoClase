@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root fx:id="bdp_detrequisitos" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #017373;" type="BorderPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.controllers.DetalleRequisitosController">
+   <top>
+      <HBox fx:id="vbx_menu" prefHeight="64.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btn_ver" mnemonicParsing="false" onAction="#btn_verAction" prefHeight="65.0" prefWidth="90.0" style="-fx-background-color: #fofofo;" text="Ver" translateX="30.0">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_modificar" mnemonicParsing="false" onAction="#btn_modificarAction" prefHeight="66.0" prefWidth="117.0" style="-fx-background-color: #fofofo;" text="Modificar" translateX="110.0">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_agregar" mnemonicParsing="false" onAction="#btn_agregarAction" prefHeight="64.0" prefWidth="193.0" style="-fx-background-color: #fofofo;" text="Agregar Requisito" translateX="200.0">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+   <right>
+      <AnchorPane fx:id="acp_detrequisitos" prefHeight="625.0" prefWidth="995.0" style="-fx-background-color: #b3b2ad;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btn_guardar" layoutX="819.0" layoutY="550.0" mnemonicParsing="false" onAction="#btn_guardarAction" prefHeight="52.0" prefWidth="149.0" style="-fx-background-color: #fofofo;" text="Guardar">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_cancelar" layoutX="22.0" layoutY="545.0" mnemonicParsing="false" onAction="#btn_cancelarAction" prefHeight="57.0" prefWidth="147.0" style="-fx-background-color: #990000;" text="Cancelar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Button>
+            <Label fx:id="txt_fecregistro" layoutX="328.0" layoutY="437.0" prefHeight="38.0" prefWidth="340.0" text="Label">
+               <font>
+                  <Font size="21.0" />
+               </font></Label>
+            <ComboBox fx:id="cbx_estado" layoutX="299.0" layoutY="313.0" prefHeight="54.0" prefWidth="332.0" />
+            <TextField fx:id="txt_descripcion" layoutX="299.0" layoutY="220.0" prefHeight="49.0" prefWidth="331.0" />
+            <TextField fx:id="txt_id" layoutX="300.0" layoutY="157.0" prefHeight="48.0" prefWidth="329.0" />
+            <Label fx:id="lbl_descripcion" layoutX="125.0" layoutY="234.0" text="Descripción">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_fecregistro" layoutX="125.0" layoutY="439.0" text="Creado el">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_estado" layoutX="125.0" layoutY="322.0" text="Estado">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_id" layoutX="210.0" layoutY="163.0" text="Id">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_titulo" layoutX="293.0" layoutY="61.0" text="Información de Requisitos">
+               <font>
+                  <Font name="System Bold Italic" size="48.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="136.0" fitWidth="132.0" layoutX="59.0" layoutY="14.0">
+               <image>
+                  <Image url="@../imagenes/logomuni.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </right>
+</fx:root>

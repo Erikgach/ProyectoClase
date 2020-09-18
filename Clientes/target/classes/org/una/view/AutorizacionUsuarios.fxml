@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="bdp_autorizaciones" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #017373;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.controllers.AutorizacionUsuariosController">
+   <top>
+      <VBox fx:id="vbx_titulo" prefHeight="102.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lbl_titulo" prefHeight="70.0" prefWidth="508.0" text="Información de Usuarios" translateX="30.0" translateY="10.0">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <TabPane fx:id="tab_autorizaciones" prefHeight="476.0" prefWidth="761.0" style="-fx-background-color: #b3b2ad;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="ven_infomacion" onSelectionChanged="#ven_infomacionAction" text="Información">
+            <content>
+              <AnchorPane fx:id="acp_informacion" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+          <Tab fx:id="ven_autorizaciones" onSelectionChanged="#ven_autorizacionesAction" text="Autorizaciones">
+            <content>
+              <AnchorPane fx:id="acp_autorizaciones" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txt_consulta" layoutX="52.0" layoutY="20.0" prefHeight="47.0" prefWidth="566.0" text="Buscar por nombre o cédula" />
+                        <Button fx:id="btn_buscar" layoutX="653.0" layoutY="24.0" mnemonicParsing="false" onAction="#btn_buscarAction" prefHeight="30.0" prefWidth="107.0" style="-fx-background-color: #fofofo;" text="Buscar" textFill="#1e1c1c">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_borrar" layoutX="785.0" layoutY="24.0" mnemonicParsing="false" onAction="#btn_borrarAction" prefHeight="33.0" prefWidth="109.0" style="-fx-background-color: #fofofo;" text="Borrar">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="lbl_usuario" layoutX="14.0" layoutY="80.0" prefHeight="35.0" prefWidth="105.0" text="Usuario">
+                           <font>
+                              <Font size="24.0" />
+                           </font></Label>
+                        <Label fx:id="lbl_cedula" layoutX="14.0" layoutY="119.0" prefHeight="35.0" prefWidth="100.0" text="Cédula">
+                           <font>
+                              <Font size="24.0" />
+                           </font></Label>
+                        <Label fx:id="txt_usuario" layoutX="123.0" layoutY="86.0" prefHeight="24.0" prefWidth="200.0" text="Label" />
+                        <Label fx:id="txt_cedula" layoutX="123.0" layoutY="124.0" prefHeight="25.0" prefWidth="201.0" text="Label" />
+                        <TableView fx:id="tabl_autorizaciones" layoutX="14.0" layoutY="158.0" prefHeight="325.0" prefWidth="977.0">
+                          <columns>
+                            <TableColumn fx:id="col_check" prefWidth="169.0" text="[   ]" />
+                            <TableColumn fx:id="col_id" prefWidth="188.0" text="Id" />
+                              <TableColumn fx:id="col_codigo" prefWidth="182.0" text="Código" />
+                              <TableColumn fx:id="col_nombre" prefWidth="238.0" text="Nombre" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btn_cancelar" layoutX="33.0" layoutY="498.0" mnemonicParsing="false" onAction="#btn_cancelarAction" prefHeight="39.0" prefWidth="137.0" style="-fx-background-color: #990000;" text="Cancelar" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_limpiar" layoutX="206.0" layoutY="496.0" mnemonicParsing="false" onAction="#btn_limpiarAction" prefHeight="45.0" prefWidth="134.0" style="-fx-background-color: #fofofo;" text="Limpiar" textFill="#221f1f">
+                           <font>
+                              <Font name="System Bold Italic" size="21.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_guardar" layoutX="832.0" layoutY="495.0" mnemonicParsing="false" onAction="#btn_guardarAction" prefHeight="46.0" prefWidth="125.0" style="-fx-background-color: #fofofo;" text="Guardar" textFill="#1b1818">
+                           <font>
+                              <Font name="System Bold Italic" size="23.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="ven_contrasena" onSelectionChanged="#ven_contrasenaAction" text="Contraseña">
+               <content>
+                  <AnchorPane fx:id="acp_contrasena" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btn_borrarC" layoutX="824.0" layoutY="42.0" mnemonicParsing="false" onAction="#btn_borrarCAction" prefHeight="31.0" prefWidth="81.0" style="-fx-background-color: #fofofo;" text="Borrar">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_buscarC" layoutX="701.0" layoutY="42.0" mnemonicParsing="false" onAction="#btn_buscarCAction" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: #fofofo;" text="Buscar">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="txt_consultaC" layoutX="123.0" layoutY="42.0" prefHeight="25.0" prefWidth="547.0" text="Buscar por id, nombre y cedula" />
+                        <TableView fx:id="tbl_infousuarios" layoutX="13.0" layoutY="90.0" prefHeight="371.0" prefWidth="947.0">
+                           <columns>
+                              <TableColumn fx:id="col_idC" prefWidth="112.0" text="Id" />
+                              <TableColumn fx:id="col_nombreCompleto" prefWidth="212.0" text="Nombre Completo" />
+                              <TableColumn fx:id="col_cedula" prefWidth="203.0" text="Cédula" />
+                              <TableColumn fx:id="col_estado" prefWidth="208.0" text="Estado" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btn_solicitarcambioC" layoutX="679.0" layoutY="481.0" mnemonicParsing="false" onAction="#btn_solicitarcambioCAction" style="-fx-background-color: #fofofo;" text="Solicitar Cambio de Contraseña" textFill="#0a0a0a">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_cancelarC" layoutX="35.0" layoutY="481.0" mnemonicParsing="false" onAction="#btn_cancelarCAction" style="-fx-background-color: #990000;" text="Cancelar">
+                           <font>
+                              <Font name="System Bold Italic" size="24.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #017373;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.controllers.InformacionUsuariosController">
+   <children>
+      <TabPane fx:id="tabpane" layoutX="23.0" layoutY="127.0" prefHeight="489.0" prefWidth="954.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Información">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="374.0" prefWidth="853.0">
+                     <children>
+                        <Label layoutX="149.0" layoutY="92.0" text="Nombre:" />
+                        <Label layoutX="95.0" layoutY="215.0" text="Fecha de registro" />
+                        <Label layoutX="63.0" layoutY="273.0" text="Fecha de modificación:" />
+                        <Label fx:id="lbl_nombre" layoutX="267.0" layoutY="92.0" text="Label" />
+                        <Label fx:id="lbl_fecha_registro" layoutX="267.0" layoutY="205.0" text="Label" />
+                        <Label fx:id="lbl_fecha_modificacion" layoutX="267.0" layoutY="274.0" text="Label" />
+                        <Label layoutX="164.0" layoutY="152.0" text="Cédula" />
+                        <Label fx:id="lbl_cedula" layoutX="267.0" layoutY="152.0" text="Label" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab onSelectionChanged="#autorizarBtonAction" text="Autorizaciones">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutY="2.0" prefHeight="447.0" prefWidth="954.0">
+                          <columns>
+                            <TableColumn prefWidth="146.0" />
+                            <TableColumn prefWidth="146.0" text="ID " />
+                              <TableColumn prefWidth="357.0" text="Código" />
+                              <TableColumn prefWidth="277.0" text="Nombre" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab onSelectionChanged="#contranaBtonAction" text="Contraseña">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #b3b2ad;" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="cancelarBton" layoutX="47.0" layoutY="636.0" mnemonicParsing="false" onAction="#cancelarBtonAction" text="Cancelar" />
+      <Button fx:id="bton_guardar" layoutX="845.0" layoutY="636.0" mnemonicParsing="false" onAction="#guardarBtonAction" text="Guardar" />
+      <Button fx:id="limpiarBton" layoutX="162.0" layoutY="636.0" mnemonicParsing="false" onAction="#limpiarBtonAction" text="Limpiar" />
+      <TextField fx:id="txt_buscar" layoutX="47.0" layoutY="70.0" prefHeight="31.0" prefWidth="546.0" />
+      <Button fx:id="bton_buscar" layoutX="791.0" layoutY="70.0" mnemonicParsing="false" onAction="#buscarBtonAction" text="Buscar" />
+      <Button fx:id="bton_borrar" layoutX="889.0" layoutY="70.0" mnemonicParsing="false" text="Borrar" />
+      <ComboBox fx:id="combo_categorias" layoutX="610.0" layoutY="70.0" prefWidth="150.0" promptText="Categorías" />
+      <Button fx:id="atrasbutton" layoutX="889.0" layoutY="7.0" mnemonicParsing="false" onAction="#retroceder" prefHeight="51.0" prefWidth="108.0" text="ATRAS">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

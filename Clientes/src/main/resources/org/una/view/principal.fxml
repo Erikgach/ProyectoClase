@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #017373;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.controllers.PrincipalController">
+   <children>
+      <VBox fx:id="pane_menuP" layoutY="76.0" prefHeight="629.0" prefWidth="267.0" spacing="10.0" style="-fx-background-color: #b3b2ad;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="71.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="66.0" prefWidth="258.0" text="INFORMACIÓN" textAlignment="RIGHT" />
+            <Button fx:id="bton_departamentos" mnemonicParsing="false" onAction="#bton_departamentosAction" prefHeight="62.0" prefWidth="254.0" text="DEPARTAMENTOS">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                        <MenuItem fx:id="detalleDepartamneto" mnemonicParsing="false" onAction="#detalle_departamento" text="Detalle Departamento" />
+                        <MenuItem fx:id="informacionDepartamento" mnemonicParsing="false" onAction="#informacion_departamento" text="Información Departamentos" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu></Button>
+            <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="252.0" text="TIPOS DE TRÁMITES">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                        <MenuItem fx:id="tramitesRegistrados" mnemonicParsing="false" onAction="#tramite_registrado" text="Tramites Registrados" />
+                        <MenuItem fx:id="informacionTipo" mnemonicParsing="false" onAction="#informacion_tramites" text="Información Tipo Tramites" />
+                        <MenuItem fx:id="detalleTipo" mnemonicParsing="false" onAction="#detalle_tipo" text="Detalle Tipo de Tramite" />
+                        <MenuItem fx:id="tipoTramites" mnemonicParsing="false" onAction="#tipo_tramite" text="Tipo Tramite" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu></Button>
+            <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="252.0" style="-fx-background-color: #fofofo;" text="DISEÑO DE TRÁMITES">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                        <MenuItem fx:id="detalleTramites1" mnemonicParsing="false" onAction="#detalle_tramites" text="Detalle de Tramites" />
+                        <MenuItem fx:id="diseñoTramites1" mnemonicParsing="false" onAction="#diseno_tramite" text="Diseño de Tramites" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu></Button>
+            <Label alignment="CENTER" prefHeight="69.0" prefWidth="253.0" text="ADMINISTRACIÓN" />
+            <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="252.0" text="PERMISOS">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                        <MenuItem fx:id="detallePermiso" mnemonicParsing="false" onAction="#detalle_permiso" text="Detalle Permisos" />
+                        <MenuItem fx:id="autoUsuarios" mnemonicParsing="false" onAction="#auto_usuarios" text="Autorización de Usuarios" />
+                        <MenuItem fx:id="InformacionPermisos" mnemonicParsing="false" onAction="#informacion_permisos" text="Información Permisos" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu></Button>
+            <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="254.0" text="USUARIOS">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                        <MenuItem fx:id="informacionUsuarios" mnemonicParsing="false" onAction="#informacion_usuario" text="Información Usuarios" />
+                        <MenuItem fx:id="detalleUsuarios" mnemonicParsing="false" onAction="#detalle_usuario" text="Detalle Usuarios" />
+                      <MenuItem fx:id="cambiasContrasena" mnemonicParsing="false" onAction="#cambia_contrasena" text="Cambiar Contraseña" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu></Button>
+            <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="254.0" text="PARÁMETROS">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                        <MenuItem fx:id="detalleRequisitos" mnemonicParsing="false" onAction="#detalle_requisito" text="Detalle Requisitos" />
+                        <MenuItem fx:id="informacionParametros" mnemonicParsing="false" onAction="#informacion_parametro" text="Información Parametros" />
+                        <MenuItem fx:id="detalleParametros" mnemonicParsing="false" onAction="#detalle_parametro" text="Detalle Parametros" />
+                        <MenuItem fx:id="detalleVariaciones" mnemonicParsing="false" onAction="#detalle_variaciones" text="Detalle Variaciones" />
+                        <MenuItem fx:id="informacionRequisitos" mnemonicParsing="false" onAction="#informacion_requisito" text="Información Requisitos" />
+                        <MenuItem fx:id="informacionVariaciones" mnemonicParsing="false" onAction="#informacion_variaciones" text="Información Variaciones" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu></Button>
+
+         </children>
+      </VBox>
+      <ImageView fitHeight="605.0" fitWidth="654.0" layoutX="316.0" layoutY="76.0">
+         <image>
+            <Image url="@../imagenes/municipalidad.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="463.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BIENVENIDOS">
+         <font>
+            <Font size="51.0" />
+         </font>
+      </Text>
+   </children>
+   <padding>
+      <Insets top="5.0" />
+   </padding>
+</AnchorPane>

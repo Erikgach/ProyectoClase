@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root" alignment="CENTER" prefHeight="700.0" prefWidth="1000.0" spacing="20.0" style="-fx-background-color: #017773;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.controllers.LoginController">
+   <children>
+      <AnchorPane prefHeight="647.0" prefWidth="969.0" style="-fx-background-color: #C3C7D0;">
+         <children>
+            <AnchorPane layoutX="564.0" layoutY="7.0" prefHeight="653.0" prefWidth="459.0">
+               <children>
+                  <Label layoutX="208.0" layoutY="176.0" prefHeight="40.0" prefWidth="118.0" text="USUARIO" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="usuarioText" layoutX="122.0" layoutY="242.0" prefHeight="31.0" prefWidth="276.0" />
+                  <Label layoutX="177.0" layoutY="327.0" prefHeight="35.0" prefWidth="166.0" text="CONTRASEÑA">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="contrasenaText" layoutX="122.0" layoutY="389.0" prefHeight="31.0" prefWidth="276.0" />
+                  <Button fx:id="loginButton" layoutX="177.0" layoutY="477.0" onAction="#validarUsuario" prefHeight="53.0" prefWidth="166.0" style="-fx-background-color: #414c54;" text="LOGIN" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Button>
+                  <Text fill="#2eb0d3" layoutX="87.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BIENVENIDOS">
+                     <font>
+                        <Font name="Felix Titling" size="47.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="54.0" layoutY="60.0">
+               <children>
+                  <AnchorPane />
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="524.0" fitWidth="488.0" layoutX="48.0" layoutY="60.0">
+               <image>
+                  <Image url="@../imagenes/municipalidad.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
